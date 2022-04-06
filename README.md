@@ -8,7 +8,7 @@ the same config on various machines.
 
 ## Structure
 
-I separated my neovim config files into various files: the base init.vim; basic (neo)vim config,
+I separated my neovim config files into various files: the base init.vim, basic (neo)vim config,
 my custom keymappings and plugin configs.
 
 This structure and most of the configs are from the ever so popular ultiamte vimrc, it has many
