@@ -13,7 +13,7 @@ my custom keymappings and plugin configs.
 
 This structure and most of the configs are from the ever so popular ultiamte vimrc, it has many
 quality of life configs, but some of them are not suited for my personal use. Plus the classic 
-vim is so slow compared to neovim. So I have to manually migrate to neovim and do a lot of tweaks 
+vim is so slow compared to neovim. So I have to manually migrate to neovim and do a lot of tweaking 
 myself.
 
 ## Disclaimer
