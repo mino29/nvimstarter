@@ -23,3 +23,46 @@ programmer, I'm more of a vim hobbiest and casual programmer. So if you find my 
 all constructive critisism are welcomed.
 
 Finally, English is not my native language, if you find typos and grammar errors, please let me know.
+
+## Installation
+
+I'd suggest you have winget, scoop installed on your windows system, this will
+make your life a lot easier.
+
+### winget and scoop
+
+Winget should be bundled with windows 11 out of the box, copy the following code
+in your powershell to try it out:
+
+```winget --version```
+
+If it returns the version number of winget instead of a bunch of red errors, you
+are good to go. Otherwise you can download winget appimage from Mic,wrosoft's
+official github page.
+
+After that, the fastest way to install vim is by coping the following code
+in your powershell:
+
+```winget install vim.vim```
+
+Of course only noobs use vim, if you're fancy like the rest of us, I'd push you
+to use neovim, which is much speedier and prettier and has a ton of features
+right from the getgo. Make sure you have scoop installed.
+
+After that, the fastest way to install neovim is just this line of code:
+
+```scoop install neovim```
+
+Before continuing the next step, please make sure you have git, curl, 7zip,
+lessmsi, dark installed in your system. If not, please copy this line to your
+powershell and hit enter:
+
+``` scoop install git 7zip curl lessmsi dark ```
+
+While you at it, also do this:
+
+``` scoop bucket add extras ```
+
+### plugins and custom key mappings 
+
+### how to update
