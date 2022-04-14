@@ -3,5 +3,5 @@
 # find the whole .vim_runtime folder, and copy here (overwrite if necessary)
 
 Copy-Item init.vim ~/AppData/Local/nvim/init.vim 
-Copy-Item -Recurse -Force .vim_runtime ~/.vim_runtime
+Copy-Item -Recurse -Force .vim_runtime ~
 
