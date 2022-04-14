@@ -7,15 +7,10 @@
 "
 "
 "
-"
-"
 " Author: Zhongzheng Wu
 " E-mail: zhongzheng.wu@outlook.com
 "
-" Note: This will only works with Windows for now
-"
-"
-"
+" Note: This only works with Windows for now
 "
 "
 "

@@ -8,10 +8,6 @@
 "                          |_|            |___/ 
 "
 "
-"
-"
-"
-"
 " Make (neo)vim more beautiful
     " Airline
     " Colorscheme
@@ -23,9 +19,9 @@
 "
 "
 "
-"
 " File explorer(s)
     " BufferExplorer
+    " Bufferline
     " MRU
     " CTRLP
     " FZF
@@ -41,26 +37,17 @@
 "
 "
 "
-"
-"
-"
-"
-"
-"
-"
-"
-"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> vim-plug, minimal plugin manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 call plug#begin()
 
-Plug 'http://github.com/tpope/vim-surround' " Surrounding ysiw
+Plug 'http://github.com/tpope/vim-surround' " Surrounding ysiw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'vim-airline/vim-airline-themes' " More themes
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
@@ -71,7 +58,7 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/tpope/vim-fugitive' " Git stuff
 Plug 'Yggdroot/indentLine' " Indentline
-Plug 'nathanaelkane/vim-indent-guides' "Indent guides
+" Plug 'nathanaelkane/vim-indent-guides' "Indent guides
 Plug 'luochen1990/rainbow' " Paren colorized
 Plug 'lervag/vimtex' " Vim LaTex
 Plug 'sbdchd/neoformat' " formatter, support multiple languages
@@ -91,18 +78,54 @@ Plug 'preservim/vim-markdown' " Markdown
 Plug 'kchmck/vim-coffee-script' " Coffeescript support
 Plug 'garbas/vim-snipmate' " Snippets
 Plug 'marcweber/vim-addon-mw-utils' " vim-snipmate support
+Plug 'tomtom/tlib_vim' " vim-snipmate support
 Plug 'junegunn/fzf' " Ultimate fuzzyfinder fzf
 Plug 'nvim-lua/plenary.nvim' " Telescope dependency
 Plug 'nvim-telescope/telescope.nvim' " Alternative fuzzy finder
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Language parser
 Plug 'MunifTanjim/nui.nvim' " UI Component Library for Neovim
-Plug 'nvim-neo-tree/neo-tree.nvim' " Elegant tree-style explorer
+Plug 'nvim-neo-t>ree/neo-tree.nvim' " Elegant tree-style explorer
 Plug 'mhinz/vim-startify' " Startup screen
 Plug 'wfxr/minimap.vim' " Fancy minimap
 Plug 'junegunn/goyo.vim' " Zen coding mode
-
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Add a GUI-lik tab for buffers
+Plug 'liuchengxu/vim-which-key' " shortcut cheatsheet
+Plug 'brglng/vim-im-select' " Switch to English input in Normal mode
+Plug 'voldikss/vim-floaterm' " Floating terminal
 
 call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+:colorscheme gruvbox
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Airline settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" let g:airline#extensions#tabline#enabled = 1
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" let g:airline_theme='dark'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -119,7 +142,6 @@ nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme jellybeans
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
@@ -138,38 +160,17 @@ let g:NERDTreeDirArrowCollapsible="~"
 " :CocInstall coc-snippets
 " :CocCommand snippets.edit... FOR EACH FILE TYPE
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" >>> Airline settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
-
+let g:coc_global_extensions = [
+  \ 'coc-pyright',
+  \ ]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> Indentline settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
-" let g:indent_guides_start_level           = 2  " 从第二层开始可视化显示缩进
+let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level           = 1  " 从第二层开始可视化显示缩进
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,7 +178,7 @@ inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -272,7 +273,6 @@ let g:snipMate = { 'snippet_version' : 1 }
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " >>> Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,7 +307,6 @@ let g:multi_cursor_quit_key            = '<Esc>'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " >>> Vimroom
@@ -386,11 +385,64 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Basic auto start
-let g:minimap_width = 10
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+" let g:minimap_width = 15
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>> Bufferline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" In your init.lua or init.vim
+set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
+
+" These commands will navigate through buffers in order regardless of which mode you are using
+" e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
+nnoremap <silent>[b :BufferLineCycleNext<CR>
+nnoremap <silent>b] :BufferLineCyclePrev<CR>
+
+" These commands will move the current buffer backwards or forwards in the bufferline
+nnoremap <silent><mymap> :BufferLineMoveNext<CR>
+nnoremap <silent><mymap> :BufferLineMovePrev<CR>
+
+" These commands will sort buffers by directory, language, or a custom criteria
+nnoremap <silent>be :BufferLineSortByExtension<CR>
+nnoremap <silent>bd :BufferLineSortByDirectory<CR>
+nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>> im-select
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let g:im_select_default = '1033'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>> Floating terminal
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configuration example
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+
+" Configuration example
+let g:floaterm_keymap_new = '<Leader>ft'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>> Startify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" custom header using figlet with ascii art
+" install figlet with scoop install figlet first
+ let g:startify_custom_header =
+       \ startify#pad(split(system('figlet -w 100 NEOVIM'), '\n'))
+
+" use NERDTree's bookmarks
+" let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
