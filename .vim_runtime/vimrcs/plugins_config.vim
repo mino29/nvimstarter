@@ -99,7 +99,9 @@ call plug#end()
 """ >>> Colorscheme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-:colorscheme gruvbox
+:colorscheme deep-space
+set background=dark
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> Airline settings
@@ -419,6 +421,9 @@ nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_
 " >>> im-select
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+" This make sure every time in normal mode, you only enter English letter
+" which will ensure your natural flow of work
 let g:im_select_default = '1033'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

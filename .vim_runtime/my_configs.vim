@@ -1,6 +1,6 @@
 "
 "
-" Personal Testing ground for various (neo)vim configs
+" Personal play ground for various (neo)vim configs
 "
 "
 "
@@ -28,7 +28,7 @@ set shell=powershell
 set clipboard=unnamed
 
 " ,y copy to system clipboard
-map <leader>y "*y 
+map <leader>y "*y
 " ctrl +c in visual mode copy to system clipboard/register
 vmap <C-c> "+y
 
@@ -38,25 +38,16 @@ nnoremap <C-A> ggVG
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" >>> vimrc editing
+""" >>> vimrc/init.vim editing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 " After editing .vim or .vimrc files, saving will automatcially source it
 
-" " Source vim configuration file whenever it is saved
-" if has ('autocmd')          " Remain compatible with earlier versions
-"  augroup Reload_Vimrc       " Group name.  Always use a unique name!
-"     autocmd!                " Clear any preexisting autocommands from this group
-"     autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
-"     autocmd! BufWritePost $MYGVIMRC if has('gui_running') | so % | echom "Reloaded " . $MYGVIMRC | endif | redraw
-"   augroup END
-" endif " has autocmd
-
-
 " Automatically source vimrc on save.
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
+nnoremap <leader>s :source ~/AppData/Local/nvim/init.vim<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,7 +72,25 @@ set listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> split workspace
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set splitbelow
+set splitright
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> vim on hardmode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+nnoremap Q <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
 
 
 
