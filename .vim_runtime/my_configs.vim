@@ -45,9 +45,24 @@ nnoremap <C-A> ggVG
 " After editing .vim or .vimrc files, saving will automatcially source it
 
 " Automatically source vimrc on save.
-autocmd! bufwritepost $MYVIMRC source $MYVIMRC
+" autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
-nnoremap <leader>s :source ~/AppData/Local/nvim/init.vim<CR>
+" nnoremap <leader>s :source ~/AppData/Local/nvim/init.vim<CR>
+nnoremap <leader>s :source $MYVIMRC<CR>
+" autocmd! bufwritepost $MYVIMRC source $MYVIMRC<CR>
+"
+" autocmd! bufwritepost  ~/.vim_runtime/my_configs.vim source $MYVIMRC
+" autocmd! bufwritepost  ~/.vim_runtime/vimrcs/plugins_config.vim source $MYVIMRC
+
+" autocmd! bufwritepost  ~/.vim_runtime/my_configs.vim source $MYVIMRC<CR>
+
+
+
+
+
+
+
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,6 +106,31 @@ nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
+
+
+
+
+
+
+
+
+" note that this configuration will cause stutter in vim,
+" map capslock as Escape key if possible
+
+" this maps jh as the Escape key in insert mode
+" inoremap jh <Esc>
+" this maps jk as the Escape key in normal mode
+" nnoremap jk <ESC>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Autoformat file on save
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
 
 
 

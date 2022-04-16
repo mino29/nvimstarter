@@ -43,17 +43,18 @@
 
 call plug#begin()
 
+Plug 'mhinz/vim-startify' " Startup screen
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysiw)
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'vim-airline/vim-airline-themes' " More themes
-Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
-Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion Framework
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
+Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'kyazdani42/nvim-web-devicons' " Additional file icons
+Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
+Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/tpope/vim-fugitive' " Git stuff
@@ -63,7 +64,7 @@ Plug 'luochen1990/rainbow' " Paren colorized
 Plug 'lervag/vimtex' " Vim LaTex
 Plug 'sbdchd/neoformat' " formatter, support multiple languages
 Plug 'metakirby5/codi.vim' " Show python script run result
-Plug 'jiangmiao/auto-pairs' " Auto pairs paren and stuff
+Plug 'jiangmiao/auto-pairs' " Auto pairs parenthesis and stuff
 Plug 'https://github.com/tpope/vim-repeat' " Repeat on crack
 Plug 'jlanzarotta/bufexplorer' " BufferExplorer
 Plug 'maxbrunsfeld/vim-yankstack' " Yankstack
@@ -85,7 +86,6 @@ Plug 'nvim-telescope/telescope.nvim' " Alternative fuzzy finder
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Language parser
 Plug 'MunifTanjim/nui.nvim' " UI Component Library for Neovim
 Plug 'nvim-neo-t>ree/neo-tree.nvim' " Elegant tree-style explorer
-Plug 'mhinz/vim-startify' " Startup screen
 Plug 'wfxr/minimap.vim' " Fancy minimap
 Plug 'junegunn/goyo.vim' " Zen coding mode
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Add a GUI-lik tab for buffers
@@ -110,10 +110,9 @@ call plug#end()
 
 " :colorscheme gruvbox
 " :colorscheme hybrid
-" :colorscheme hybrid_reverse
+:colorscheme hybrid_reverse
 " :colorscheme nord
 " :colorscheme snow
-" :colorscheme minimalist
 " :colorscheme molokai
 " :colorscheme oceanic_material
 " :colorscheme mountaineer-grey
@@ -124,7 +123,7 @@ call plug#end()
 " :colorscheme orange-moon
 " :colorscheme spacecamp
 " :colorscheme spacecamp_lite
-:colorscheme afterglow
+" :colorscheme afterglow
 
 
 """"""""""" nice themes   4/5
@@ -133,6 +132,7 @@ call plug#end()
 " :colorscheme iceberg
 " :colorscheme PaperColor
 " :colorscheme lucid
+" :colorscheme minimalist
 " :colorscheme lucius
 " :colorscheme alduin
 " :colorscheme apprentice
@@ -290,8 +290,18 @@ let g:NERDTreeDirArrowCollapsible="~"
 " :CocCommand snippets.edit... FOR EACH FILE TYPE
 
 let g:coc_global_extensions = [
-  \ 'coc-pyright',
+  \ 'coc-jedi',
   \ ]
+
+
+" Must-installs
+
+
+
+
+
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> Indentline settings
@@ -573,8 +583,21 @@ let g:floaterm_keymap_new = '<Leader>ft'
 
 " custom header using figlet with ascii art
 " install figlet with scoop install figlet first
+" figlet example
+ " let g:startify_custom_header =
+ "       \ startify#pad(split(system('figlet -w 100 NEOVIM'), '\n'))
+
+
+
+
  let g:startify_custom_header =
-       \ startify#pad(split(system('figlet -w 100 NEOVIM'), '\n'))
+       \ startify#pad(split(system('cowsay --random Cest la vie '), '\n'))
+
+
+
+
+
+
 
 " use NERDTree's bookmarks
 " let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")

@@ -391,7 +391,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 :set number
-:set relativenumber
+" :set relativenumber
 :set noswapfile
 :set cursorline
 :set autoindent
@@ -402,7 +402,7 @@ endfunction
 :set mouse=a
 :set textwidth=80
 :set colorcolumn=80
-:set scrolloff=8
+:set scrolloff=15
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -420,7 +420,7 @@ set termencoding=utf-8
 
 
 " Sets how many lines of history VIM has to remember
-set history=500
+set history=1000
 
 " Enable filetype plugins
 filetype plugin on
