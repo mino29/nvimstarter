@@ -12,7 +12,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-set guifont=Consola\ :h12
+
+
+" Somehow this only works with goneovim but not nvim-qt
+
+" :set guifont=Hack\ NF\ :h11
+:set guifont=CaskaydiaCove\ NF\ :h11
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> Default terminal shell 
@@ -48,7 +53,7 @@ nnoremap <C-A> ggVG
 " autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " nnoremap <leader>s :source ~/AppData/Local/nvim/init.vim<CR>
-nnoremap <leader>s :source $MYVIMRC<CR>
+nnoremap <leader>t :source $MYVIMRC<CR>
 " autocmd! bufwritepost $MYVIMRC source $MYVIMRC<CR>
 "
 " autocmd! bufwritepost  ~/.vim_runtime/my_configs.vim source $MYVIMRC

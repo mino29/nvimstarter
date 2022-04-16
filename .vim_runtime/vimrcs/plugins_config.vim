@@ -584,18 +584,12 @@ let g:floaterm_keymap_new = '<Leader>ft'
 " custom header using figlet with ascii art
 " install figlet with scoop install figlet first
 " figlet example
- " let g:startify_custom_header =
- "       \ startify#pad(split(system('figlet -w 100 NEOVIM'), '\n'))
-
-
-
-
  let g:startify_custom_header =
-       \ startify#pad(split(system('cowsay --random Cest la vie '), '\n'))
+       \ startify#pad(split(system('figlet -w 100 NEOVIM'), '\n'))
 
-
-
-
+ " neo-cowsay example
+ " let g:startify_custom_header =
+       " \ startify#pad(split(system('cowsay -f gopher you smell like spring'), '\n'))
 
 
 

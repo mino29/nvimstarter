@@ -4,4 +4,4 @@
 
 Copy-Item init.vim ~/AppData/Local/nvim/init.vim 
 Copy-Item -Recurse -Force .vim_runtime ~
-
+Write-Host "You local neovim config has been updated."
