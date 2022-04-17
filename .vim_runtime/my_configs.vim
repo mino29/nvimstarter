@@ -1,6 +1,6 @@
 "
 "
-" Personal play ground for various (neo)vim configs
+" Personal playground for various (neo)vim configs
 "
 "
 "
@@ -23,13 +23,36 @@
 """ >>> Default terminal shell 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" set shell=cmd
 set shell=powershell
-
+" set shell=pwsh.exe
+" set shell=wsl
+" set shell=bash
+"
+"
+"
+"
+" ---------- note ----------
+"  Still haven't figure out how to write bash.exe's path
+" set shell=C:/Program Files/Git/bin/bash.exe
+"
+"
+" These definately do not work, avoid them at all cost
+" But if you ever got stupid, find the vim file and edit with notepad,
+" comment out or simply delete one of the following lines, save,
+" then restart vim
+"
+" set shell=powershell.exe -NoLogo
+" set shell=wt
+"
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> Clipboard
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " share os clipboard (only paste)
+" Comment out the follwing line if you don't want the excessive amount of 
+" editing details to be shown in your clipboard
 set clipboard=unnamed
 
 " ,y copy to system clipboard
@@ -58,15 +81,7 @@ nnoremap <leader>t :source $MYVIMRC<CR>
 "
 " autocmd! bufwritepost  ~/.vim_runtime/my_configs.vim source $MYVIMRC
 " autocmd! bufwritepost  ~/.vim_runtime/vimrcs/plugins_config.vim source $MYVIMRC
-
 " autocmd! bufwritepost  ~/.vim_runtime/my_configs.vim source $MYVIMRC<CR>
-
-
-
-
-
-
-
 
 
 
@@ -100,7 +115,6 @@ set splitbelow
 set splitright
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ >>> vim on hardmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -111,12 +125,6 @@ nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
-
-
-
-
-
-
 
 
 " note that this configuration will cause stutter in vim,
