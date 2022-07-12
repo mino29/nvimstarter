@@ -18,12 +18,11 @@
 " modular config files " {{{
 " ---------------------------------------------------------------------
 
+runtime ./plugins.vim
 runtime ./base.vim
-" ./themes.vim
 " ./colors/themes.vim
 " ./after/plugins
 "
-runtime ./plugins.vim
 runtime ./mapping.vim
 
 if has("unix")
