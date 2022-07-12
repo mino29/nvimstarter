@@ -1,4 +1,247 @@
+" This is my own neovim config from scratch
+" It will have tons of notes in it
 "
+"
+"
+"
+"---------- note ---------- 
+"on Linux, init.vim is located at ~/.config/nvim/init.vim
+"on Windows, init.vim is located at ~\AppData\Local\nvim\init.vim
+"
+"
+"
+"
+" In the future these will all be divided into vim files for a cleaner structur.
+" I will write a index below to show my vision/plan
+"
+"
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> General settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+set number
+set relativenumber
+set cursorline
+set ruler
+set colorcolumn=80
+set scrolloff=15
+set mouse=a
+
+
+filetype plugin on
+filetype indent on
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> leader key
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let mapleader = ","
+
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" :W sudosaves the file
+" (useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit! 
+
+" Edit init.vim quickly on the fly
+nmap <leader>g :e $MYVIMRC<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> file state manipulations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set noswapfile
+set nobackup
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> avoid encoding problems
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+set encoding=UTF-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Indentations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set autoindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set textwidth=80
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> History
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Always show the status line
+" Not sure what it does at moment, will figure it out later
+ set laststatus=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Editing/ cursor movement
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" let 0 go the firt non-white space character in the line
+map 0 ^
+
+" let ^ go the firt white space character in the line
+" map ^ 0
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Editing/ vim hard mode cursor movement
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+nnoremap Q <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+
+
+" note that this configuration will cause stutter in vim,
+" map capslock as Escape key if possible
+
+" this maps jh as the Escape key in insert mode
+" inoremap jh <Esc>
+" this maps jk as the Escape key in normal mode
+" nnoremap jk <ESC>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Editing/ invisible element
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" Show white space as actual unicode characters
+
+
+set list
+set listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:↓
+
+" toggle whitespace character with leader key + backslash (\)
+:nmap <leader>\ :set invlist<cr>
+
+
+
+" " delete trailing white space on save, useful for some filetypes ;)
+" fun! CleanExtraSpaces()
+"     let save_cursor = getpos(".")
+"     let old_query = getreg('/')
+"     silent! %s/\s\+$//e
+"     call setpos('.', save_cursor)
+"     call setreg('/', old_query)
+" endfun
+
+" if has("autocmd")
+"     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+" endif
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> workspace/ buffer management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> workspace/ tab management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> workspace/ split management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+set splitbelow
+set splitright
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> Search Replace and highlight/show
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" start a search and match
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <C-space> ?
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Ignore case/case insensitive when searching
+set ignorecase
+
+" Not sure what it does yet, but since everyone's using it 
+set smartcase
+
+"Highlight you search
+set hlsearch
+
+" Not sure what it does yet, but since everyone's using it 
+set incsearch
+
+"Quickly disable highlight search temporarily
+map <silent> <leader><cr> :noh<cr>
+
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+
+
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>>Plugin manager /Vim Plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 "
 "         _                       _             
 "  __   _(_)_ __ ___        _ __ | |_   _  __ _ 
@@ -8,7 +251,7 @@
 "                          |_|            |___/ 
 "
 "
-" Make (neo)vim more beautiful
+" Make (neo)vim more beautiful(UI)
     " Airline
     " Colorscheme
     " vim-Devicons
@@ -49,7 +292,9 @@ Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar/line
 Plug 'vim-airline/vim-airline-themes' " More themes
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion Framework
+Plug 'dracula/vim', { 'as': 'dracula' } " Dracula theme
+" Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion Framework
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'kyazdani42/nvim-web-devicons' " Additional file icons
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
@@ -89,14 +334,15 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Language autocompl
 Plug 'MunifTanjim/nui.nvim' " UI Component Library for Neovim
 Plug 'wfxr/minimap.vim' " Fancy minimap
 Plug 'junegunn/goyo.vim' " Zen coding mode
-Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Add a GUI-lik tab for buffers
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' } " Add a GUI-like tab for buffers
 Plug 'liuchengxu/vim-which-key' " shortcut cheatsheet
 Plug 'brglng/vim-im-select' "Auto Switch to English input in Normal mode
 Plug 'voldikss/vim-floaterm' " Floating terminal
-Plug 'https://github.com/f-person/git-blame.nvim' " Find out what went wrong
 Plug 'sindrets/diffview.nvim' " better diffview
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mtdl9/vim-log-highlighting'
+Plug 'junegunn/vim-emoji' " Emoji in vim, how cute is that
+Plug 'https://gitlab.com/gi1242/vim-emoji-ab.git' " Additional emoji support
 
 
 call plug#end()
@@ -111,6 +357,7 @@ call plug#end()
 
 """"""""""" really cool themes   5/5
 
+:colorscheme dracula
 " :colorscheme gruvbox
 " :colorscheme hybrid
 " :colorscheme hybrid_reverse
@@ -118,7 +365,6 @@ call plug#end()
 " :colorscheme snow
 " :colorscheme molokai
 " :colorscheme oceanic_material
-" :colorscheme mountaineer-grey
 " :colorscheme one
 " :colorscheme onedark
 " :colorscheme scheakur
@@ -127,12 +373,13 @@ call plug#end()
 " :colorscheme spacecamp
 " :colorscheme spacecamp_lite
 " :colorscheme afterglow
-:colorscheme ayu
+" :colorscheme ayu
 
 
 """"""""""" nice themes   4/5
 
 " :colorscheme jellybeans
+" :colorscheme mountaineer-grey
 " :colorscheme iceberg
 " :colorscheme PaperColor
 " :colorscheme lucid
@@ -296,16 +543,17 @@ let g:coc_global_extensions = [
     \ 'coc-go',
     \ 'coc-java',
     \ 'coc-java-vimspector',
+    \ 'coc-lua',
+    \ 'coc-sh',
+    \ 'coc-markdownlint',
+    \ 'coc-powershell',
+    \ 'coc-marketplace',
+    \ 'coc-ltex',
     \]
 
 
 
 " Must-installs
-
-
-
-
-
 
 
 
@@ -576,7 +824,7 @@ nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_
 " >>> im-select
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
+" This is not necessary for linux distros
 " This make sure every time in normal mode, you only enter English letter
 " which will ensure your natural flow of work
 let g:im_select_default = '1033'
@@ -591,7 +839,7 @@ let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
 
 " Configuration example
-let g:floaterm_keymap_new = '<Leader>ft'
+let g:floaterm_keymap_new = '<leader>ft'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -610,6 +858,175 @@ let g:floaterm_keymap_new = '<Leader>ft'
        " \ startify#pad(split(system('cowsay -f gopher A la vie a la mort'), '\n'))
 
 
+" returns all modified files of the current git repo
+" `2>/dev/null` makes the command fail quietly, so that when we are not
+" in a git repo, the list will be empty
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
 
-" use NERDTree's bookmarks
-" let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
+" same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },]
+        " \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        " \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+        " \ { 'type': 'commands',  'header': ['   Commands']       },
+        " \ ]
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>> Emoji
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+" Still haven't figure out how emoji works
+
+
+" Emoji completion
+set completefunc=emoji#complete
+
+
+" Emoji completion
+" %s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
+
+
+
+
+
+" ---------- note ----------
+"  Things that are meant to be in the future
+"  How to set thing according to your os settings
+"  for example: 
+"		if os is mac, then ...
+"		if os is windows, then ...
+"		if os is linux, then ...
+"
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> OS specific settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+" This part let (neo)vim autodetect you current os:
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
+
+" This part let (neo)vim autodetect you current os:
+if has("gui_running")
+    if g:os == "Darwin"
+        set guifont=Noto\ Mono:h12
+    elseif g:os == "Linux"
+        set guifont=Noto\ Mono\ 10
+    elseif g:os == "Windows"
+        set guifont=Noto_Mono:h12:cANSI
+    endif
+endif
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" >>> 📋 clipboard
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" if has("win32")
+" 	call plug#begin()
+" 	Plug 'brglng/vim-im-select' "Auto Switch to English input in Normal mode
+" 	call plug#end()
+" endif
+
+
+
+
+" This part applies shared clipboard feature between os and vim:
+
+" for this to work, on windows just download the latest neovim:
+" 	scoop bucket add extra
+" 	scoop install neovim
+" you are good to go, win32yank is bundled in
+
+" in wsl, you have to download win32yank yourself, then copy the exe file to
+" /urs/local/bin
+
+
+" Then your wsl and vim are truely one unified body
+
+
+
+if has ("win32")
+	set clipboard=unnamed
+elseif has ("linux") || ("wsl")
+	set clipboard=unnamedplus
+endif
+
+
+
+"
+"
+" 			:if has("win32")
+" 							*feature-list*
+" 		    List of supported pseudo-feature names:
+" 			acl		|ACL| support.
+" 			bsd		BSD system (not macOS, use "mac" for that).
+" 			clipboard	|clipboard| provider is available.
+" 			fname_case	Case in file names matters (for Darwin and MS-Windows
+" 					this is not present).
+" 			iconv		Can use |iconv()| for conversion.
+" 			linux		Linux system.
+" 			mac		MacOS system.
+" 			nvim		This is Nvim.
+" 			python3		Legacy Vim |python3| interface. |has-python|
+" 			pythonx		Legacy Vim |python_x| interface. |has-pythonx|
+" 			sun		SunOS system.
+" 			ttyin		input is a terminal (tty).
+" 			ttyout		output is a terminal (tty).
+" 			unix		Unix system.
+" 			*vim_starting*	True during |startup|.
+" 			win32		Windows system (32 or 64 bit).
+" 			win64		Windows system (64 bit).
+" 			wsl		WSL (Windows Subsystem for Linux) system.
+
+
+
+" various (neo)vim applications/distributions
+
+" macvim
+" gvim
+" goneovim
+" nvim-qt
+
+
+
+
+" this should auto source init.vim after each save
+
+autocmd! BufWritePost $MYVIMRC source $MYVIMRC | echom "Reloaded $NVIMRC"
+
+
+" new-found features
+
+" press g then ctrl-g, shows the word count of current buffer
+
