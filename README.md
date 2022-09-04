@@ -7,6 +7,32 @@ I tested on win10, win11, wsl2(ubuntu) ,wsl2(arch), arch(gnome), fedora
 
 Haven't test mac myself, but it should work just like linux.
 
+
+## Features
+
+**Lightweight**
+
+After install all the plugins, it takes about 800 MB(My vscode took about 2G)
+With all the lsp stuff, it consumes about 1G of ram.
+Less than 1 second to open up.
+(I know it's not the 100KB mark you have in mind, but with all the modern
+convenience it has, I think it's totally worth it.)
+
+**Feature rich**
+
+Auto-complete
+Auto-format
+Auto-update
+Auto-manage plugins
+Intuitive ui
+100% customizable
+About 100 colorschemes to choose out of the box
+(Dracula, Nord, Solarized, OneDark etc.)
+
+**Free**
+
+Well, it's free and free.
+
 ## Structure
 
 I finally modulized meovim config, the directory tree is as follows:
