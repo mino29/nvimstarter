@@ -63,6 +63,37 @@ While you at it, also do this:
 
 ``` scoop bucket add extras ```
 
+### meovim install
+
+on Windows, open up terminal(cmd or powershell) and do:
+
+```git clone https://github.com/mino29/meovim "$env:LOCALAPPDATA\nvim"```
+
+on Linux/Mac, open up terminal(cmd or powershell) and do:
+
+```git clone https://github.com/mino29/meovim ~/.config/nvim```
+
+After cloning, open up nvim, it should automatically install various plugins,
+After that's done, reopen nvim, it should be ready to go.
+
+If nothing's happening, try do:
+
+```:PacerSync```
+
+I'v test it on 2 windows 10 machines; 
+arch linux(gnome desktop), fedora, WSL2(ubuntu).
+Haven't test it on mac though, I don't really like mac these days. (Maybe when
+the notch thing is gone.) 
+
+But if you do own a mac, please tell me how the experience goes.
+
+if your internect connection is unstable as mine, 
+it should take a minute or two. 
+
+However if your internet is pretty good and you are not based in mainland China,
+(if you are: guys, set up a proxy service for)
+the installation should be instantaneous. (less than 15 seconds)
+
 ### plugins and custom key mappings 
 
 ### how to update
