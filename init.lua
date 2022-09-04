@@ -17,7 +17,7 @@ require ('user.project')
 require ('user.statusline')
 require ('user.toggleterm')
 require ('user.treesitter')
-require ('user.cocnvim')
+--[[ require ('user.cocnvim') ]]
 require ('user.whichkey')
 
 

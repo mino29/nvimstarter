@@ -108,7 +108,9 @@ Finally, English is not my native language, if you find typos and grammar errors
 ## Installation
 
 I'd suggest you have winget, scoop installed on your windows system, this will
-make your life a lot easier.
+make your life a lot easier. (Linux has either apt, dnf, pacman, brew or even
+nixenv etc. ; Mac has brew.) Please for your own sake, get a package manager for your
+system.
 
 
 ### Dependencies
@@ -121,6 +123,7 @@ npm
 curl
 python
 yarn
+im-select
 ```
 
 A patched font to display properly various icons and glyphs.
@@ -131,6 +134,7 @@ caskadyia cove.
 There are many ways to install these beautiful fonts, they're just one google
 search away.
 
+[nerd-fonts](https://www.nerdfonts.com/)
 
 ### winget and scoop
 
@@ -308,6 +312,25 @@ npm i -g yarn
 Make sure you have python and node installed, I mostly use anaconda and nvm.
 They are not the lightest, but they are well known and widely available.
 
+
+**Auto Switch Input method**
+
+For users that use multiple languages keyboard/input, for example Arabic,
+Japanese, Korean, Chinese etc. I'd highly recommend you download im-select and
+add to your path.
+
+It ensures that when you in normal mode, your input will automatically switch to
+English(US), thus your keybinds and all the fast text editing is still there.
+You don't have to manually switch to it between normal mode and insert mode.
+
+If you use English for both code and typing comments and other general text
+editing, you won't be needing this. You should remove [im-select](https://github.com/daipeihust/im-select) 
+from plugins.lua and other related settings from your respective os config file (i.e. windows.lua/mac.lua)
+
+I haven't figure out a way to implement im-select in linux, it's said that linux
+has other ways instead of im-select to solve this kind of problem, sadly I
+wasn't able to find the solution myself. Please let me know if you know how to
+do it.
 
 
 ## Inspiration
