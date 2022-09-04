@@ -2,19 +2,75 @@
 
 ## Intro
 
-These are my personal neovim config files, currently it only works on my windows 11 machine. 
-I'll be trying out macOS and linux with the same config really soon, so hopefully I can get 
-the same config on various machines.
+After limited testing on my part, meovim now works across different oses.
+I tested on win10, win11, wsl2(ubuntu) ,wsl2(arch), arch(gnome), fedora
+Haven't test mac myself, but it should work just like linux.
 
 ## Structure
 
-I separated my neovim config files into various files: the base init.vim, basic (neo)vim config,
-my custom keymappings and plugin configs.
+I finally modulized meovim config, the directory tree is as follows:
 
-This structure and most of the configs are from the ever so popular ultiamte vimrc, it has many
+```
+├── LICENSE
+├── README.md
+├── coc-settings.json
+├── ginit.vim
+├── init.lua
+├── install.ps1
+├── install.sh
+├── lua
+│   └── user
+│       ├── airline.lua
+│       ├── alpha.lua
+│       ├── autocomands.lua
+│       ├── autopairs.lua
+│       ├── bufferline.lua
+│       ├── cmp.lua
+│       ├── cocnvim.lua
+│       ├── colorschemes.lua
+│       ├── comment.lua
+│       ├── gitsigns.lua
+│       ├── impatient.lua
+│       ├── indentline.lua
+│       ├── keymaps.lua
+│       ├── linux.lua
+│       ├── lualine.lua
+│       ├── mac.lua
+│       ├── nvim-tree.lua
+│       ├── options.lua
+│       ├── plugins.lua
+│       ├── project.lua
+│       ├── statusline.lua
+│       ├── surround.lua
+│       ├── telescope.lua
+│       ├── toggleterm.lua
+│       ├── treesitter.lua
+│       ├── whichkey.lua
+│       └── windows.lua
+├── neovim-context-menu
+│   ├── install-context.reg
+│   └── uninstall-context.reg
+└── plugin
+    └── packer_compiled.lua
+```
+
+This structure and most of the configs are from the ever so popular ultiamte vimrc and also lunarvim, it has many
 quality of life configs, but some of them are not suited for my personal use. Plus the classic 
 vim is so slow compared to neovim. So I have to manually migrate to neovim and do a lot of tweaking 
 myself.
+
+
+The directory looks a bit daunting at first, but over the years I found it quite
+easy to maintain and debug.
+
+ginit.vim and neovim-context-menu is for people that use windows and gui app
+like neovim-qt, if you are serious about using neovim for all your text editing
+needs, you will want that. But if you're fixed on doing everything on the
+terminal, you can ignore them or even delete them to make your nvim directory a
+little cleaner.
+
+
+
 
 ## Disclaimer
 
@@ -28,6 +84,31 @@ Finally, English is not my native language, if you find typos and grammar errors
 
 I'd suggest you have winget, scoop installed on your windows system, this will
 make your life a lot easier.
+
+
+
+
+### Dependencies
+
+
+```
+git
+nodejs
+npm
+curl
+python
+yarn
+```
+
+A patched font to display properly various icons and glyphs.
+I personally like hack-nf.
+If you dont' like hack-nf, I would also recommend popular ones like jetbrainsmono, fira code and
+caskadyia cove.
+
+There are many ways to install these beautiful fonts, they're just one google
+search away.
+
+
 
 ### winget and scoop
 
@@ -49,15 +130,6 @@ in your powershell:
 
 setup scoop on your system and install neovim and all the required dependencies.
 
-```
-git
-nodejs
-npm
-curl
-python
-yarn
-```
-
 
 Before continuing the next step, please make sure you have git, curl, 7zip,
 lessmsi, dark installed in your system. If not, please copy this line to your
@@ -67,7 +139,10 @@ powershell and hit enter:
 
 While you at it, also do this:
 
-``` scoop bucket add extras ```
+``` 
+scoop bucket add extras 
+scoop bucket add nerd-fonts
+```
 
 Then installing everything would just look like this:
 
@@ -76,6 +151,7 @@ scoop install neovim
 scoop install git
 scoop install python
 scoop install wget
+scoop install hack-nf
 
 npm install -g yarn
 npm install -g neovim
@@ -119,3 +195,37 @@ the installation should be instantaneous. (less than 15 seconds)
 ### plugins and custom key mappings 
 
 ### how to update
+
+If you want a stable text editor/IDE, I'd suggest you update as little as you can.
+But if you want the latest and greatest, you can just cd into your nvim
+directory and do:
+
+```
+git pull
+```
+
+then open up neovim and do
+
+```
+:PackerSync
+```
+
+Unless some major update happens to neovim, I'll be mostly doing bug fixes and make
+meovim more speedy and stable. Adding more features will only slow it down and
+cause stability issues. Nobody wants that.
+
+
+
+## Inspiration
+
+I'm merely a (neo)vim tinker, I barely know python, so most of the configs of
+Meovim is sourced from different amazing actual developers.
+
+You can check them out for more inspiration to build your own neovim.
+
+ultimate vimrc
+lunarvim
+craftzdog
+neuro9
+pathogen
+
