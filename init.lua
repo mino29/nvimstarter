@@ -1,5 +1,5 @@
-require ("user.options") 
-require ("user.plugins") 
+require ("user.options")
+require ("user.plugins")
 require ('user.alpha')
 require ('user.autocomands')
 require ('user.autopairs')
@@ -19,10 +19,6 @@ require ('user.toggleterm')
 require ('user.treesitter')
 require ('user.cocnvim')
 require ('user.whichkey')
-
--- require ('user.windows')
--- require ('user.mac')
--- require ('user.linux')
 
 
 local has = function(x)

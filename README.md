@@ -43,15 +43,12 @@ official github page.
 After that, the fastest way to install vim is by coping the following code
 in your powershell:
 
-```winget install vim.vim```
+```winget install neovim.neovim```
 
-Of course only noobs use vim, if you're fancy like the rest of us, I'd push you
-to use neovim, which is much speedier and prettier and has a ton of features
-right from the getgo. Make sure you have scoop installed.
+### Scoop is way better
 
-After that, the fastest way to install neovim is just this line of code:
+setup scoop on your system and install neovim and all the required dependencies.
 
-```scoop install neovim```
 
 Before continuing the next step, please make sure you have git, curl, 7zip,
 lessmsi, dark installed in your system. If not, please copy this line to your
@@ -67,11 +64,11 @@ While you at it, also do this:
 
 on Windows, open up terminal(cmd or powershell) and do:
 
-```git clone https://github.com/mino29/meovim "$env:LOCALAPPDATA\nvim"```
+```git clone https://github.com/mino29/meovim.git "$env:LOCALAPPDATA\nvim"```
 
 on Linux/Mac, open up terminal(cmd or powershell) and do:
 
-```git clone https://github.com/mino29/meovim ~/.config/nvim```
+```git clone https://github.com/mino29/meovim.git ~/.config/nvim```
 
 After cloning, open up nvim, it should automatically install various plugins,
 After that's done, reopen nvim, it should be ready to go.
