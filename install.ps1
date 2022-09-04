@@ -8,3 +8,7 @@ nvim +PackerSync +qa!
 
 # Give feedback that we installed the ultimate vimrc
 echo "Meovim Installed, meow~"
+
+
+cd $env:LOCALAPPDATA\nvim\neovim-context-menu
+echo "if you want to use neovim everywhere"

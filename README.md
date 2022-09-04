@@ -4,6 +4,7 @@
 
 After limited testing on my part, meovim now works across different oses.
 I tested on win10, win11, wsl2(ubuntu) ,wsl2(arch), arch(gnome), fedora
+
 Haven't test mac myself, but it should work just like linux.
 
 ## Structure
@@ -70,8 +71,6 @@ terminal, you can ignore them or even delete them to make your nvim directory a
 little cleaner.
 
 
-
-
 ## Disclaimer
 
 This is still a work in progress, many parts can still be broken, also I'm not a professional 
@@ -84,8 +83,6 @@ Finally, English is not my native language, if you find typos and grammar errors
 
 I'd suggest you have winget, scoop installed on your windows system, this will
 make your life a lot easier.
-
-
 
 
 ### Dependencies
@@ -109,7 +106,6 @@ There are many ways to install these beautiful fonts, they're just one google
 search away.
 
 
-
 ### winget and scoop
 
 Winget should be bundled with windows 11 out of the box, copy the following code
@@ -118,10 +114,10 @@ in your powershell to try it out:
 ```winget --version```
 
 If it returns the version number of winget instead of a bunch of red errors, you
-are good to go. Otherwise you can download winget appimage from Mic,wrosoft's
+are good to go. Otherwise you can download winget appimage from Microsoft's
 official github page.
 
-After that, the fastest way to install vim is by coping the following code
+After that, the fastest way to install neovim is by coping the following code
 in your powershell:
 
 ```winget install neovim.neovim```
@@ -159,8 +155,6 @@ npm install -g neovim
 pip install pynvim
 ```
 
-
-
 ### meovim install
 
 on Windows, open up terminal(cmd or powershell) and do:
@@ -197,7 +191,7 @@ the installation should be instantaneous. (less than 15 seconds)
 ### how to update
 
 If you want a stable text editor/IDE, I'd suggest you update as little as you can.
-But if you want the latest and greatest, you can just cd into your nvim
+But if you want the latest from me, you can just cd into your nvim
 directory and do:
 
 ```
@@ -214,6 +208,62 @@ Unless some major update happens to neovim, I'll be mostly doing bug fixes and m
 meovim more speedy and stable. Adding more features will only slow it down and
 cause stability issues. Nobody wants that.
 
+Beside, cat is pretty lazy, so updates from meovim won't be very often. :-)
+
+
+## Get healthy
+
+Everyone's system is a bit different, so after install I strongly recommend in
+neovim you do:
+
+```
+:checkhealth
+```
+You might notice that you clipboard tool is missing, let's fix that
+
+- On windows `yank32.exe` should be bundled with neovim
+- On mac `pbcopy` should be builtin
+- On linux you might have to install xsel
+
+- On ubuntu
+```
+sudo apt install xsel -y
+```
+- On Arch linxu
+
+```
+sudo pacman -S xsel --noconfirm
+```
+- On fedora linxu
+
+```
+sudo dnf install xsel -y
+```
+(the -y and --noconfirm flags are for lazy people like me who don't want to
+press extra enter button once)
+
+
+Next step is to install python and node(if you don't use coc.nvim, then node is
+optional)
+
+- Neovim python support
+
+```
+pip install pynvim
+pip install dark
+```
+
+- Neovim node support
+
+```
+npm i -g neovim
+npm i -g yarn
+```
+
+**NOTE**
+Make sure you have python and node installed, I mostly use anaconda and nvm.
+They are not the lightest, but they are well known and widely available.
+
 
 
 ## Inspiration
@@ -221,11 +271,23 @@ cause stability issues. Nobody wants that.
 I'm merely a (neo)vim tinker, I barely know python, so most of the configs of
 Meovim is sourced from different amazing actual developers.
 
-You can check them out for more inspiration to build your own neovim.
+You can check them out for more inspirations to build your own neovim.
 
-ultimate vimrc
-lunarvim
-craftzdog
-neuro9
-pathogen
+- [ultimate vimrc](https://github.com/amix/vimrc)
+- [lunarvim](https://github.com/LunarVim/LunarVim)
+- [craftzdog](https://github.com/craftzdog/dotfiles-public)
+- [neuralnine](https://github.com/NeuralNine/config-files)
 
+
+
+(neo)vim in video form
+- [neovim from scratch(playlist)](https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ)
+- [Awesome neovim setup from scartch](https://www.youtube.com/results?search_query=neovim)
+- [Porting Your Neovim Configuration to Lua](https://www.youtube.com/watch?v=aG4aDVj3kAc)
+- [Set up Neovim on a new M2 Macbook Air](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&t=784s)
+
+
+
+
+I also got a lot of pieces from various stackoverflow and reddit posts. I can no
+longer recall exactly where I got them from. But thanks internet.
