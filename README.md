@@ -188,6 +188,24 @@ the installation should be instantaneous. (less than 15 seconds)
 
 ### plugins and custom key mappings 
 
+The leader key is space, a lot of the frequently used key binds are set with
+whichkey, which has an elegant ui prompt. If you just started to use meovim,
+this will save you a lot of headaches from remembering seemingly crazy key binds like gcc
+for commenting and space+tf for open up a float terminal.
+
+Most of the time you just press space or g to do slightly advanced actions.
+
+If you find some key mappings not to your taste, I'd suggest go in kemaps.lua
+and whichkey.lua, and make your own adjustments.
+
+
+I was so used to ","(comma) as my leader key, old habit from using the "Ultimate
+Vimrc", I tried so hard on remapping a lot of neovim configs that I came across
+into using comma as my leader key. Ultimately hitting comma is not that
+ergonomic if you hit it very often. Trust me, space is the way to go.
+
+Or not, if you want to suffer as I did. :-)
+
 ### how to update
 
 If you want a stable text editor/IDE, I'd suggest you update as little as you can.
@@ -204,7 +222,7 @@ then open up neovim and do
 :PackerSync
 ```
 
-Unless some major update happens to neovim, I'll be mostly doing bug fixes and make
+Unless some major updates happen to neovim, I'll be mostly doing bug fixes and make
 meovim more speedy and stable. Adding more features will only slow it down and
 cause stability issues. Nobody wants that.
 
@@ -225,7 +243,7 @@ You might notice that you clipboard tool is missing, let's fix that
 - On mac `pbcopy` should be builtin
 - On linux you might have to install xsel
 
-- On ubuntu
+- On ubuntu/debian
 ```
 sudo apt install xsel -y
 ```
