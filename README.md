@@ -49,6 +49,15 @@ in your powershell:
 
 setup scoop on your system and install neovim and all the required dependencies.
 
+```
+git
+nodejs
+npm
+curl
+python
+yarn
+```
+
 
 Before continuing the next step, please make sure you have git, curl, 7zip,
 lessmsi, dark installed in your system. If not, please copy this line to your
@@ -59,6 +68,22 @@ powershell and hit enter:
 While you at it, also do this:
 
 ``` scoop bucket add extras ```
+
+Then installing everything would just look like this:
+
+```
+scoop install neovim
+scoop install git
+scoop install python
+scoop install wget
+
+npm install -g yarn
+npm install -g neovim
+
+pip install pynvim
+```
+
+
 
 ### meovim install
 
@@ -75,7 +100,7 @@ After that's done, reopen nvim, it should be ready to go.
 
 If nothing's happening, try do:
 
-```:PacerSync```
+```:PackerSync```
 
 I'v test it on 2 windows 10 machines; 
 arch linux(gnome desktop), fedora, WSL2(ubuntu).
