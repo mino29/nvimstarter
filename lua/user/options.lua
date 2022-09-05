@@ -95,5 +95,6 @@ vim.cmd[[
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 ]]
 
-
+-- gui font(mostly for neovide)
+vim.opt.guifont = "Hack NF:h10"
 

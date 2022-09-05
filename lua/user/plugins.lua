@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use("lunarvim/darkplus.nvim")
   use('rafi/awesome-vim-colorschemes') -- Retro Scheme
   use {'dracula/vim', as = 'dracula' }-- Dracula theme
+  use("RRethy/nvim-base16") --Even more colorscheme
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
