@@ -62,9 +62,9 @@ return packer.startup(function(use)
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
 
   --status line
-	-- use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
-    use 'vim-airline/vim-airline' -- Status bar/line
-    use 'vim-airline/vim-airline-themes' -- More themes
+	use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
+    -- use 'vim-airline/vim-airline' -- Status bar/line
+    -- use 'vim-airline/vim-airline-themes' -- More themes
 
   --terminal
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })

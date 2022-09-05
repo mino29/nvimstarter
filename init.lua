@@ -10,8 +10,8 @@ require ('user.comment')
 require ('user.gitsigns')
 require ('user.impatient')
 require ('user.keymaps')
--- require ('user.lualine')
-require ('user.airline')
+require ('user.lualine')
+-- require ('user.airline')
 require ('user.nvim-tree')
 require ('user.project')
 require ('user.statusline')
@@ -19,6 +19,7 @@ require ('user.toggleterm')
 require ('user.treesitter')
 --[[ require ('user.cocnvim') ]]
 require ('user.whichkey')
+--require ('user.whichkeydefault')
 
 
 local has = function(x)
