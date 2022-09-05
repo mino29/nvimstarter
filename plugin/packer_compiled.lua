@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-pairs",
-    url = "https://github.com/jiangmiao/auto-pairs"
-  },
   ["awesome-vim-colorschemes"] = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\awesome-vim-colorschemes",

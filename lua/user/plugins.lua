@@ -47,7 +47,7 @@ return packer.startup(function(use)
 
   -- autopair
 	use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
-  use('jiangmiao/auto-pairs') -- Auto pairs parenthesis and stuff
+  -- use('jiangmiao/auto-pairs') -- Auto pairs parenthesis and stuff
   use('luochen1990/rainbow') -- Paren colorized
 
   -- comment
@@ -68,7 +68,6 @@ return packer.startup(function(use)
 
   --terminal
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
-  -- use 'voldikss/vim-floaterm' -- Floating terminal
 
 	use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
 	use({ "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" })
@@ -156,9 +155,6 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 end)
-
-
-
 
 
 
