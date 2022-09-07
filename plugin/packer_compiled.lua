@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["darkplus.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\darkplus.nvim",
-    url = "https://github.com/lunarvim/darkplus.nvim"
-  },
   dracula = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula",
@@ -133,16 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  fzf = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf",
-    url = "https://github.com/junegunn/fzf"
-  },
-  ["git.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git.nvim",
-    url = "https://github.com/dinhhuy258/git.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -203,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
-  },
-  ["nvim-base16"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-base16",
-    url = "https://github.com/RRethy/nvim-base16"
   },
   ["nvim-cmp"] = {
     loaded = true,

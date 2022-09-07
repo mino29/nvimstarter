@@ -47,7 +47,6 @@ return packer.startup(function(use)
 
   -- autopair
 	use({ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }) -- Autopairs, integrates with both cmp and treesitter
-  -- use('jiangmiao/auto-pairs') -- Auto pairs parenthesis and stuff
   use('luochen1990/rainbow') -- Paren colorized
 
   -- comment
@@ -55,7 +54,6 @@ return packer.startup(function(use)
 
 	use({ "JoosepAlviste/nvim-ts-context-commentstring", commit = "88343753dbe81c227a1c1fd2c8d764afb8d36269" })
   use ('ryanoasis/vim-devicons') -- Developer Icons
-	-- use({ "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" })
 	use({ "kyazdani42/nvim-tree.lua", commit = "bdb6d4a25410da35bbf7ce0dbdaa8d60432bc243" })
 	-- use({ "akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353" })
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
@@ -77,10 +75,8 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 
 	-- Colorschemes
-  use("lunarvim/darkplus.nvim")
   use('rafi/awesome-vim-colorschemes') -- Retro Scheme
   use {'dracula/vim', as = 'dracula' }-- Dracula theme
-  use("RRethy/nvim-base16") --Even more colorscheme
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -111,6 +107,7 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+    use 'nvim-telescope/telescope-file-browser.nvim'
 
 	-- Treesitter
 	use({
@@ -137,8 +134,7 @@ return packer.startup(function(use)
     use 'terryma/vim-multiple-cursors' -- CTRL + N for multiple cursors
     use 'sbdchd/neoformat' -- formatter, support multiple languages
     use 'tpope/vim-repeat' -- Repeat on crack
-    use 'junegunn/fzf' -- Ultimate fuzzyfinder fzf
-  use 'nvim-telescope/telescope-file-browser.nvim'
+    -- use 'junegunn/fzf' -- Ultimate fuzzyfinder fzf
   use 'windwp/nvim-ts-autotag'
   use 'norcalli/nvim-colorizer.lua'
   use({
@@ -147,7 +143,7 @@ return packer.startup(function(use)
   })
   -- use 'github/copilot.vim'
 
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
+  -- use 'dinhhuy258/git.nvim' -- For git blame & browse
     -- use 'marcweber/vim-addon-mw-utils' -- vim-snipmate support
 
 	-- Automatically set up your configuration after cloning packer.nvim
