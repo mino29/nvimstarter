@@ -59,6 +59,9 @@ return packer.startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 	use({ "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" })
 
+    -- python related
+    use ('davidhalter/jedi-vim')
+
   --status line
 	use({ "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" })
     -- use 'vim-airline/vim-airline' -- Status bar/line
