@@ -121,7 +121,7 @@ keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 
 
 -- map 0 to the first non-white space character
-keymap('', '0', '^', opts)
+-- keymap('', '0', '^', opts)
 
 
 vim.cmd[[
