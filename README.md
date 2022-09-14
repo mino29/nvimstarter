@@ -1,11 +1,21 @@
-# neovim_config
+# Meovim (Just my neovim config)
 
-## Intro
+## Introduction
 
 After limited testing on my part, meovim now works across different oses.
 I tested on win10, win11, wsl2(ubuntu) ,wsl2(arch), arch(gnome), fedora
 
 Haven't test mac myself, but it should work just like linux.
+
+## Some screenshots
+
+
+<p align="center">
+<img src="resources/alpha.png" width="600">
+<img src="resources/autocomplete.png" width="600">
+<img src="resources/meovim-demo.gif" width="600">
+</p>
+
 
 
 ## Features
