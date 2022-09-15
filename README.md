@@ -1,3 +1,38 @@
+<div align="center">
+<p>
+    <a>
+      <img alt="Linux" src="https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black" />
+    </a>
+    <a>
+      <img alt="macOS" src="https://img.shields.io/badge/macOS-%23.svg?style=flat-square&logo=apple&color=000000&logoColor=white" />
+    </a>
+    <a>
+      <img alt="Windows" src="https://img.shields.io/badge/Windows-%23.svg?style=flat-square&logo=windows&color=0078D6&logoColor=white" />
+    </a>
+    <a href="https://github.com/mino29/meovim/commits">
+      <img src="https://badgen.net/github/commits/mino29/meovim" alt="Commit number" />
+    </a>
+    <a href="https://github.com/mino29/meovim/network">
+      <img alt="Forks" src="https://badgen.net/github/forks/mino29/meovim">
+    </a>
+    <a href="https://github.com/mino29/meovim/stargazers">
+      <img alt="Stars" src="https://badgen.net/github/stars/mino29/meovim">
+    </a>
+    <a href="https://github.com/mino29/meovim/releases/latest">
+      <img alt="Latest release" src="https://img.shields.io/github/v/release/mino29/meovim" />
+    </a>
+    <a href="https://github.com/neovim/neovim/releases/tag/stable">
+      <img src="https://img.shields.io/badge/Neovim-0.7.2-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
+    </a>
+    <a href="https://github.com/mino29/meovim/search?l=vim-script">
+      <img src="https://img.shields.io/github/languages/top/mino29/meovim" alt="Top languages"/>
+    </a>
+    <a href="https://github.com/mino29/meovim/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/mino29/meovim?style=flat-square&logo=GNU&label=License" alt="License"/>
+    </a>
+</p>
+</div>
+
 # Meovim (Just my neovim config)
 
 ## Introduction
