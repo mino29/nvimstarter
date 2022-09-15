@@ -18,17 +18,15 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- not sure what it does
--- maybe multiline cursor?
-
-keymap('n', '<c-s>', ':w<CR>', {})
-keymap('i', '<c-s>', ':w<CR>', {})
+-- classic ctrl+s to save
+-- keymap('n', '<c-s>', ':w<CR>', {})
+-- keymap('i', '<c-s>', ':w<CR>', {})
 
 -- navigate splits
 local opts = { noremap = true }
 
 -- Normal --
--- Better window navigation
+-- Better window/buffer navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
@@ -128,7 +126,7 @@ keymap("x", "$", "g_", opts)
 
 
 -- map 0 to the first non-white space character
--- keymap('', '0', '^', opts)
+keymap('', '0', '^', opts)
 
 
 vim.cmd[[

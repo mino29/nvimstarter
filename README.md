@@ -9,9 +9,6 @@
     <a>
       <img alt="Windows" src="https://img.shields.io/badge/Windows-%23.svg?style=flat-square&logo=windows&color=0078D6&logoColor=white" />
     </a>
-    <a href="https://github.com/mino29/meovim/commits">
-      <img src="https://badgen.net/github/commits/mino29/meovim" alt="Commit number" />
-    </a>
     <a href="https://github.com/mino29/meovim/network">
       <img alt="Forks" src="https://badgen.net/github/forks/mino29/meovim">
     </a>
@@ -46,9 +43,9 @@ Haven't test mac myself, but it should work just like linux.
 
 
 <p align="center">
-<img src="resources/alpha.png" width="600">
-<img src="resources/autocomplete.png" width="600">
-<img src="resources/meovim-demo.gif" width="600">
+<img src="resources/images/alpha.png" width="600">
+<img src="resources/images/autocomplete.png" width="600">
+<img src="resources/images/meovim-demo.gif" width="600">
 </p>
 
 
