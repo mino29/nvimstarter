@@ -103,6 +103,13 @@ keymap('n', 'te', ':tabedit', opts)
 keymap('n', 'ss', ':split<Return><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 
+-- Do not include white space characters when using $ in visual mode,
+-- see https://vi.stackexchange.com/q/12607/15292
+keymap("x", "$", "g_", opts)
+
+
+
+
 -- Move window
 -- keymap('n', '<Space>', '<C-w>w', opts)
 -- keymap('', 'sh', '<C-w>h', opts)
