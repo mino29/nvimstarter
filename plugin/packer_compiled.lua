@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["awesome-vim-colorschemes"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\awesome-vim-colorschemes",
-    url = "https://github.com/rafi/awesome-vim-colorschemes"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
@@ -118,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  dracula = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dracula",
-    url = "https://github.com/dracula/vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -183,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoformat",
     url = "https://github.com/sbdchd/neoformat"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,

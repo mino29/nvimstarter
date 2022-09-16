@@ -90,5 +90,5 @@ vim.cmd [[
 ]]
 
 -- gui font(mostly for neovide)
-vim.opt.guifont = "Hack NF:h10"
+vim.opt.guifont = "Hack! NF:h10"
 
