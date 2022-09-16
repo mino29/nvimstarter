@@ -67,7 +67,7 @@ return packer.startup(function(use)
     -- use 'vim-airline/vim-airline' -- Status bar/line
     -- use 'vim-airline/vim-airline-themes' -- More themes
 
-  --terminal
+  -- 🎯 terminal
 	use({ "akinsho/toggleterm.nvim", commit = "aaeed9e02167c5e8f00f25156895a6fd95403af8" })
 
 	use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
@@ -78,8 +78,9 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 
 	-- Colorschemes
-  use('rafi/awesome-vim-colorschemes') -- Retro Scheme
-  use {'dracula/vim', as = 'dracula' }-- Dracula theme
+  -- use('rafi/awesome-vim-colorschemes') -- Retro Scheme
+  -- use {'dracula/vim', as = 'dracula' }-- Dracula theme
+    use ('shaunsingh/nord.nvim')
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
