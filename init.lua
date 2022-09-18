@@ -19,6 +19,7 @@ require('user.treesitter')
 --[[ require ('user.cocnvim') ]]
 require('user.whichkey')
 -- require ('user.whichkeydefault')
+-- require('user.code_runner')
 
 local has = function(x)
     return vim.fn.has(x) == 1
