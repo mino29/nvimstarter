@@ -15,7 +15,6 @@ require('user.nvim-tree')
 require('user.project')
 require('user.toggleterm')
 require('user.treesitter')
---[[ require ('user.cocnvim') ]]
 require('user.whichkey')
 -- require ('user.whichkeydefault')
 -- require('user.code_runner')
