@@ -41,7 +41,15 @@ require("bufferline").setup{}
 
 
 -- using only tab to scroll tab/bufferline
+<<<<<<< HEAD
 -- can be too easy, leading to mistypes
 -- vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 -- vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 
+||||||| b80c699
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+=======
+-- vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
+-- vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+>>>>>>> aa10faa84ccebc1c3d2e979611f7ae788ac94917
