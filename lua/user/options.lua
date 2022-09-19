@@ -50,7 +50,7 @@ local options = {
     wrap = false, -- display lines as one long line
     scrolloff = 15, -- is one of my fav
     sidescrolloff = 8,
-    guifont = "monospace:h17", -- the font used in graphical neovim applications
+    guifont = "Hack! NF:h10",-- the font used in graphical neovim applications
     ruler = true,
     textwidth = 80,
     colorcolumn = '80',
@@ -88,7 +88,4 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 ]]
-
--- gui font(mostly for neovide)
-vim.opt.guifont = "Hack! NF:h10"
 
