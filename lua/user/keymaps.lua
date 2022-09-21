@@ -94,8 +94,8 @@ keymap('n', 'x', '"_x', opts)
 -- Delete a word backwards
 -- keymap('n', 'dw', 'vb"_d', opts)
 
--- Select all
-keymap('n', '<C-a>', 'gg<S-v>G', opts)
+-- Select all (not that useful)
+-- keymap('n', '<C-a>', 'gg<S-v>G', opts)
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {} )
