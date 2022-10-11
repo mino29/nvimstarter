@@ -1,46 +1,36 @@
-local status_ok, bufferline = pcall(require, "bufferline")
-if (not status_ok) then return end
+local status, bufferline = pcall(require, "bufferline")
+if (not status) then return end
 
 bufferline.setup({
   options = {
     mode = "tabs",
-    separator_style = 'thin',
-    always_show_bufferline = true,
-    show_buffer_close_icons = true,
-    show_close_icon = true,
+    separator_style = 'slant',
+    always_show_bufferline = false,
+    show_buffer_close_icons = false,
+    show_close_icon = false,
     color_icons = true
   },
-
-  -- highlights = {
-  --   separator = {
-  --     fg = '#073642',
-  --     bg = '#002b36',
-  --   },
-  --   separator_selected = {
-  --     fg = '#073642',
-  --   },
-  --   background = {
-  --     fg = '#657b83',
-  --     bg = '#002b36'
-  --   },
-  --   buffer_selected = {
-  --     fg = '#fdf6e3',
-  --     bold = true,
-  --   },
-  --   fill = {
-  --     bg = '#073642'
-  --   }
-  -- },
+  highlights = {
+    separator = {
+      fg = '#073642',
+      bg = '#002b36',
+    },
+    separator_selected = {
+      fg = '#073642',
+    },
+    background = {
+      fg = '#657b83',
+      bg = '#002b36'
+    },
+    buffer_selected = {
+      fg = '#fdf6e3',
+      bold = true,
+    },
+    fill = {
+      bg = '#073642'
+    }
+  },
 })
 
-
-
--- " In your init.lua or init.vim
-vim.opt.termguicolors = true
-require("bufferline").setup{}
-
-
--- using only tab to scroll tab/bufferline
--- can be too easy, leading to mistypes
--- vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
--- vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
+vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})

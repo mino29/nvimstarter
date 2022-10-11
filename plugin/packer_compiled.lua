@@ -71,258 +71,263 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["awesome-vim-colorschemes"] = {
+    loaded = true,
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\awesome-vim-colorschemes",
+    url = "https://github.com/rafi/awesome-vim-colorschemes"
   },
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["code_runner.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\code_runner.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
+  },
+  dracula = {
+    loaded = true,
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\dracula",
+    url = "https://github.com/dracula/vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["jedi-vim"] = {
-    loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\jedi-vim",
-    url = "https://github.com/davidhalter/jedi-vim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\markdown-preview.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   neoformat = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neoformat",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
   ["nord.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-installer",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-lsp-installer",
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-surround",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-context-commentstring",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["prettier.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   ["project.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
   rainbow = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rainbow",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\rainbow",
     url = "https://github.com/luochen1990/rainbow"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
   ["vim-css-color"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-css-color",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-css-color",
     url = "https://github.com/ap/vim-css-color"
   },
   ["vim-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-devicons",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-im-select"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-im-select",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-im-select",
     url = "https://github.com/brglng/vim-im-select"
   },
   ["vim-multiple-cursors"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-multiple-cursors",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-multiple-cursors",
     url = "https://github.com/terryma/vim-multiple-cursors"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-repeat",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
   },
   ["which-key.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\mino29\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
+    path = "C:\\Users\\mino29\\AppData\\Roaming\\nvim-data\\site\\pack\\packer\\start\\which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
   }
 }

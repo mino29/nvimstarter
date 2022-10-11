@@ -24,7 +24,7 @@ vim.cmd [[
 
   augroup _auto_resize
     autocmd!
-    autocmd VimResized * tabdo wincmd = 
+    autocmd VimResized * tabdo wincmd =
   augroup end
 
   augroup _alpha
@@ -34,13 +34,13 @@ vim.cmd [[
 
     autocmd! BufWritePost $MYVIMRC source $MYVIMRC | echom "Reloaded $NVIMRC"
 
-    augroup fmt
-      autocmd!
-      autocmd BufWritePre * undojoin | Neoformat
-    augroup END
-
-    let g:neoformat_enabled_python = ['black', 'autopep8', 'docformatter']
-    let g:neoformat_enabled_css = ['prettier']
+    " augroup fmt
+    "   autocmd!
+    "   autocmd BufWritePre * undojoin | Neoformat
+    " augroup END
+    "
+    " let g:neoformat_enabled_python = ['black', 'autopep8', 'docformatter']
+    " let g:neoformat_enabled_css = ['prettier']
 
 ]]
 
