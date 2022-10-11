@@ -14,7 +14,7 @@ require('user.lualine')
 require('user.nvim-tree')
 require('user.project')
 require('user.toggleterm')
-require('user.treesitter')
+-- require('user.treesitter')
 require('user.whichkey')
 
 local has = function(x)
