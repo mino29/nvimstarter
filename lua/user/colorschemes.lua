@@ -1,8 +1,8 @@
 vim.cmd [[
 try
-  colorscheme dracula
+  colorscheme gotham
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme dracula
+  colorscheme hybrid
   set background=dark
 endtry
 ]]
