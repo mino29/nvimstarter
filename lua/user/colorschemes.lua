@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme dracula
+  colorscheme tokyonight
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme dracula
   set background=dark
