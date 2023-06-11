@@ -76,7 +76,6 @@ return packer.startup(function(use)
 
 	-- Colorschemes
     use {'dracula/vim', as = 'dracula' }-- Dracula theme
-    use ('shaunsingh/nord.nvim')
     use ('folke/tokyonight.nvim')
 
 	-- cmp plugins
