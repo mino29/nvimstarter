@@ -103,6 +103,8 @@ return packer.startup(function(use)
 
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
+	-- LaTeX
+    use 'lervag/vimtex'
   --im-select
   use 'brglng/vim-im-select' --Auto Switch to English input in Normal mode
 
