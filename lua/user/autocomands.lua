@@ -32,7 +32,13 @@ vim.cmd [[
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
 
+  augroup _latex
+    autocmd BufWritePost *.tex silent! execute :VimtexCompile
+  augroup end
+
+  augroup _nvimrc
     autocmd! BufWritePost $MYVIMRC source $MYVIMRC | echom "Reloaded $NVIMRC"
+  augroup end
 
     " augroup fmt
     "   autocmd!
@@ -41,6 +47,7 @@ vim.cmd [[
     "
     " let g:neoformat_enabled_python = ['black', 'autopep8', 'docformatter']
     " let g:neoformat_enabled_css = ['prettier']
+
 
 ]]
 
