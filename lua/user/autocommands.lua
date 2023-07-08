@@ -33,7 +33,8 @@ vim.cmd [[
   augroup end
 
   augroup _latex
-    autocmd BufWritePost *.tex silent! execute :VimtexCompile
+    autocmd!
+    autocmd BufWritePost *.tex silent! :VimtexCompile
   augroup end
 
   augroup _nvimrc

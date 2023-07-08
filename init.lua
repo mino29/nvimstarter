@@ -1,7 +1,7 @@
 require("user.options")
 require("user.plugins")
 require('user.alpha')
-require('user.autocomands')
+require('user.autocommands')
 require('user.autopairs')
 require('user.bufferline')
 require('user.cmp')
